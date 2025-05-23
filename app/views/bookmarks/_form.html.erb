@@ -1,6 +1,6 @@
 <%= simple_form_for [@list, @bookmark] do |f| %>
   <%= f.input :comment %>
-  <%= f.input :movie_id, collection: Movie.all, label_method: :title, value_method: :id %>
+  <%= f.association :movie %>
   <%= f.submit class: "btn btn-primary mt-4" %>
 
   <%#= link_to "Delete", pet_path(Pet.last), data: { turbo_method: :delete, turbo_confirm: "Are your sure?" } %>
